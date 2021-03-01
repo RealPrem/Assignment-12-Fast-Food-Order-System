@@ -33,7 +33,7 @@ namespace Assignment_12_Fast_Food_Order_System
                     }
                     else if(OptionNumber == 2)
                     {
-                        
+                        CalculateBill(Order,PL);
                     }
                 }
             }
