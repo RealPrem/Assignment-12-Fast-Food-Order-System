@@ -14,6 +14,10 @@ namespace Assignment_12_Fast_Food_Order_System
             this.ItemID = ItemID;
             this.Quantity = Quantity;
         }
+        public string GetItemID()
+        {
+            return ItemID;
+        }
         public int GetQuantity()
         {
             return Quantity;

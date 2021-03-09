@@ -53,13 +53,19 @@ namespace Assignment_12_Fast_Food_Order_System
         public double CalculateBill(Item[] PL)
         {
             double Total = 0;
-            for (int i = 0; i < FI.Length; i += 1)
+            for (int i = 0; i < FICount; i += 1)
             {
-                Total += (FindPrice(PL, PL[i].GetItemID()) * FI[i].GetQuantity());
+                string ItemID = FI[i].GetItemID();
+                int Quantity = FI[i].GetQuantity();
+                double Price = FindPrice(PL, ItemID);
+                Total = Total + (Price * Quantity);
             }
-            for (int i = 0; i < DI.Length; i += 1)
+            for (int i = 0; i < DICount; i += 1)
             {
-                Total += (FindPrice(PL, PL[i].GetItemID())  * DI[i].GetQuantity());
+                string ItemID = DI[i].GetItemID();
+                int Quantity = DI[i].GetQuantity();
+                double Price = FindPrice(PL, ItemID);
+                Total = Total + (Price * Quantity);
             }
             return Total;
         }
